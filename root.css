@@ -1,0 +1,662 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-color: #0d1021;
+}
+
+body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--dark-color);
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.night {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    filter: blur(0.1vmin);
+    background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)),
+    radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)),
+    repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px,
+            transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px,
+            transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px,
+            rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(38, 244, 147),
+            rgb(240, 240, 240));
+}
+
+.container * {
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}/*# sourceMappingURL=main.css.map */
+
+
+#lunita{
+    position:absolute;
+    top:1%;
+    right:20%;
+    right:calc(20% - 100px);
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background:#CCC;
+    box-shadow:0px 0px 100px #FFFF8C;
+    z-index:5;
+    -webkit-animation: moonAnimation 3s infinite;
+    -moz-animation: moonAnimation 3s infinite;
+    animation: moonAnimation 3s infinite;
+
+}
+
+#lunitaFase{
+    position:absolute;
+    top:1%;
+    right:20%;
+    right:calc(20% - 100px);
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background: rgba(153,153,153,0);
+    box-shadow: inset -25px 0px 0 0px #999;
+    z-index:6;
+    -webkit-animation: moonFaseAnimation 600s infinite;
+    -moz-animation: moonFaseAnimation 600s infinite;
+    animation: moonFaseAnimation 600s infinite;
+}
+
+.crater{
+    position:absolute;
+    background:#555;
+    box-shadow: inset 3px -2px 0 0px #414043;
+    z-index:7;
+}
+
+.crater1{
+    top:30px;
+    left:40px;
+    width:25px;
+    height:45px;
+    border-top-right-radius:50px 100px;
+    border-top-left-radius:50px 100px;
+    border-bottom-right-radius:50px 100px;
+    border-bottom-left-radius:50px 100px;
+    -webkit-transform:rotate(40deg);
+    -moz-transform:rotate(40deg);
+    transform:rotate(40deg);
+}
+
+.crater2{
+    top:125px;
+    right:20px;
+    width:15px;
+    height:20px;
+    border-top-right-radius:20px 20px;
+    border-top-left-radius:20px 20px;
+    border-bottom-right-radius:20px 30px;
+    border-bottom-left-radius:20px 30px;
+    -webkit-transform:rotate(-60deg);
+    -moz-transform:rotate(-60deg);
+    transform:rotate(-60deg);
+}
+
+.crater3{
+    top:120px;
+    left:60px;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+}
+
+.crater4{
+    top:90px;
+    right:90px;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+}
+
+.crater5{
+    top:50px;
+    left:120px;
+    width:30px;
+    height:35px;
+    border-radius:50%;
+    -webkit-transform:rotate(120deg);
+    -moz-transform:rotate(120deg);
+    transform:rotate(120deg);
+}
+
+.crater6{
+    bottom:15px;
+    left:80px;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+}
+
+.crater7{
+    bottom:15px;
+    left:130px;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+}
+/*-----------------------------------*/
+@keyframes "moonFaseAnimation" {
+    0% {
+        box-shadow: inset -25px 0px 0 0px #999;
+        background: rgba(153,153,153,0);
+    }
+    50% {
+        box-shadow: inset -200px 0px 0 0px #999;
+    }
+    51% {
+        background: rgba(153,153,153,1);
+    }
+    52% {
+        box-shadow: inset 200px 0px 0 0px #999;
+    }
+    53% {
+        background: rgba(153,153,153,0);
+    }
+    100% {
+        box-shadow: inset -25px 0px 0 0px #999;
+    }
+
+}
+
+@-moz-keyframes moonFaseAnimation {
+    0% {
+        box-shadow: inset -25px 0px 0 0px #999;
+        background: rgba(153,153,153,0);
+    }
+    50% {
+        box-shadow: inset -200px 0px 0 0px #999;
+    }
+    51% {
+        background: rgba(153,153,153,1);
+    }
+    52% {
+        box-shadow: inset 200px 0px 0 0px #999;
+    }
+    53% {
+        background: rgba(153,153,153,0);
+    }
+    100% {
+        box-shadow: inset -25px 0px 0 0px #999;
+    }
+
+}
+
+@-webkit-keyframes "moonFaseAnimation" {
+    0% {
+        box-shadow: inset -25px 0px 0 0px #999;
+        background: rgba(153,153,153,0);
+    }
+    50% {
+        box-shadow: inset -200px 0px 0 0px #999;
+        /* background: rgba(153,153,153,0);*/
+    }
+    51% {
+        background: rgba(153,153,153,1);
+    }
+    52% {
+        box-shadow: inset 200px 0px 0 0px #999;
+    }
+    53% {
+        background: rgba(153,153,153,0);
+    }
+    100% {
+        box-shadow: inset -25px 0px 0 0px #999;
+    }
+
+}
+/*-----------------------------------*/
+@keyframes "moonAnimation" {
+    0% {
+        box-shadow: 0px 0px 100px #FFF;
+    }
+    50% {
+        box-shadow: 0px 0px 140px #FFF;
+    }
+    100% {
+        box-shadow: 0px 0px 100px #FFF;
+    }
+
+}
+
+@-moz-keyframes moonAnimation {
+    0% {
+        box-shadow: 0px 0px 100px #FFF;
+    }
+    50% {
+        box-shadow: 0px 0px 140px #FFF;
+    }
+    100% {
+        box-shadow: 0px 0px 100px #FFF;
+    }
+
+}
+
+@-webkit-keyframes "moonAnimation" {
+    0% {
+        box-shadow: 0px 0px 100px #FFF;
+    }
+    50% {
+        box-shadow: 0px 0px 140px #FFF;
+    }
+    100% {
+        box-shadow: 0px 0px 100px #FFF;
+    }
+
+}
+
+.cielo-1{
+    width: 100vw;
+    height: 400vh;
+    background: transparent;
+    position: absolute;
+
+
+    -webkit-animation: animaCielo 5s linear infinite backwards running;
+    -moz-animation: animaCielo 5s linear infinite backwards running;
+    -ms-animation: animaCielo 5s linear infinite backwards running;
+    animation: animaCielo 5s linear infinite backwards running;
+
+    .estrella{
+        background: green;
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+    }
+
+}
+.cielo-2{
+    background: #000000;
+    width: 100%;
+    height: 400%;
+    position: absolute;
+
+    -webkit-animation: animaCielo 3s linear infinite backwards running;
+    -moz-animation: animaCielo 3s linear infinite backwards running;
+    -ms-animation: animaCielo 3s linear infinite backwards running;
+    animation: animaCielo 3s linear infinite backwards running;
+
+
+    .estrellaDos{
+        background: red;
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+    }
+}
+
+@-webkit-keyframes animaCielo{
+    0% {
+        top:-100%;
+    }
+
+    100% {
+        top:0%;
+    }
+}
+
+@-ms-keyframes animaCielo{
+    0% {
+        top:-100%;
+    }
+
+    100% {
+        top:0%;
+    }
+}
+
+
+@-o-keyframes animaCielo{
+    0% {
+        top:-100%;
+    }
+
+    100% {
+        top:0%;
+    }
+}
+@-moz-keyframes animaCielo{
+    0% {
+        top:-100%;
+    }
+
+    100% {
+        top:0%;
+    }
+}
+
+.estrella {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    -webkit-filter: drop-shadow(0 0 6px #699bff);
+    filter: drop-shadow(0 0 6px #699bff);
+    -webkit-animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+    animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+}
+.estrella::before, .estrella::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
+    -webkit-transform: translateX(50%) rotateZ(45deg);
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    -webkit-animation: shining 3000ms ease-in-out infinite;
+    animation: shining 3000ms ease-in-out infinite;
+}
+.estrella::after {
+    -webkit-transform: translateX(50%) rotateZ(-45deg);
+    transform: translateX(50%) rotateZ(-45deg);
+}
+.estrella:nth-child(1) {
+    top: calc(50% - 185px);
+    left: calc(50% - 150px);
+    -webkit-animation-delay: 8971ms;
+    animation-delay: 8971ms;
+}
+.estrella:nth-child(1)::before, .estrella:nth-child(1)::after, .estrella:nth-child(1)::after {
+    -webkit-animation-delay: 8971ms;
+    animation-delay: 8971ms;
+}
+.estrella:nth-child(2) {
+    top: calc(50% - 50px);
+    left: calc(50% - 179px);
+    -webkit-animation-delay: 9256ms;
+    animation-delay: 9256ms;
+}
+.estrella:nth-child(2)::before, .estrella:nth-child(2)::after, .estrella:nth-child(2)::after {
+    -webkit-animation-delay: 9256ms;
+    animation-delay: 9256ms;
+}
+.estrella:nth-child(3) {
+    top: calc(50% - -146px);
+    left: calc(50% - 135px);
+    -webkit-animation-delay: 8700ms;
+    animation-delay: 8700ms;
+}
+.estrella:nth-child(3)::before, .estrella:nth-child(3)::after, .estrella:nth-child(3)::after {
+    -webkit-animation-delay: 8700ms;
+    animation-delay: 8700ms;
+}
+.estrella:nth-child(4) {
+    top: calc(50% - -77px);
+    left: calc(50% - 157px);
+    -webkit-animation-delay: 3147ms;
+    animation-delay: 3147ms;
+}
+.estrella:nth-child(4)::before, .estrella:nth-child(4)::after, .estrella:nth-child(4)::after {
+    -webkit-animation-delay: 3147ms;
+    animation-delay: 3147ms;
+}
+.estrella:nth-child(5) {
+    top: calc(50% - -183px);
+    left: calc(50% - 8px);
+    -webkit-animation-delay: 6588ms;
+    animation-delay: 6588ms;
+}
+.estrella:nth-child(5)::before, .estrella:nth-child(5)::after, .estrella:nth-child(5)::after {
+    -webkit-animation-delay: 6588ms;
+    animation-delay: 6588ms;
+}
+.estrella:nth-child(6) {
+    top: calc(50% - -29px);
+    left: calc(50% - 195px);
+    -webkit-animation-delay: 8009ms;
+    animation-delay: 8009ms;
+}
+.estrella:nth-child(6)::before, .estrella:nth-child(6)::after, .estrella:nth-child(6)::after {
+    -webkit-animation-delay: 8009ms;
+    animation-delay: 8009ms;
+}
+.estrella:nth-child(7) {
+    top: calc(50% - 95px);
+    left: calc(50% - 69px);
+    -webkit-animation-delay: 5420ms;
+    animation-delay: 5420ms;
+}
+.estrella:nth-child(7)::before, .estrella:nth-child(7)::after, .estrella:nth-child(7)::after {
+    -webkit-animation-delay: 5420ms;
+    animation-delay: 5420ms;
+}
+.estrella:nth-child(8) {
+    top: calc(50% - -59px);
+    left: calc(50% - 70px);
+    -webkit-animation-delay: 9378ms;
+    animation-delay: 9378ms;
+}
+.estrella:nth-child(8)::before, .estrella:nth-child(8)::after, .estrella:nth-child(8)::after {
+    -webkit-animation-delay: 9378ms;
+    animation-delay: 9378ms;
+}
+.estrella:nth-child(9) {
+    top: calc(50% - 76px);
+    left: calc(50% - 238px);
+    -webkit-animation-delay: 2845ms;
+    animation-delay: 2845ms;
+}
+.estrella:nth-child(9)::before, .estrella:nth-child(9)::after, .estrella:nth-child(9)::after {
+    -webkit-animation-delay: 2845ms;
+    animation-delay: 2845ms;
+}
+.estrella:nth-child(10) {
+    top: calc(50% - 83px);
+    left: calc(50% - 6px);
+    -webkit-animation-delay: 5205ms;
+    animation-delay: 5205ms;
+}
+.estrella:nth-child(10)::before, .estrella:nth-child(10)::after, .estrella:nth-child(10)::after {
+    -webkit-animation-delay: 5205ms;
+    animation-delay: 5205ms;
+}
+.estrella:nth-child(11) {
+    top: calc(50% - -137px);
+    left: calc(50% - 267px);
+    -webkit-animation-delay: 808ms;
+    animation-delay: 808ms;
+}
+.estrella:nth-child(11)::before, .estrella:nth-child(11)::after, .estrella:nth-child(11)::after {
+    -webkit-animation-delay: 808ms;
+    animation-delay: 808ms;
+}
+.estrella:nth-child(12) {
+    top: calc(50% - 12px);
+    left: calc(50% - 8px);
+    -webkit-animation-delay: 2406ms;
+    animation-delay: 2406ms;
+}
+.estrella:nth-child(12)::before, .estrella:nth-child(12)::after, .estrella:nth-child(12)::after {
+    -webkit-animation-delay: 2406ms;
+    animation-delay: 2406ms;
+}
+.estrella:nth-child(13) {
+    top: calc(50% - 148px);
+    left: calc(50% - 47px);
+    -webkit-animation-delay: 7566ms;
+    animation-delay: 7566ms;
+}
+.estrella:nth-child(13)::before, .estrella:nth-child(13)::after, .estrella:nth-child(13)::after {
+    -webkit-animation-delay: 7566ms;
+    animation-delay: 7566ms;
+}
+.estrella:nth-child(14) {
+    top: calc(50% - -28px);
+    left: calc(50% - 75px);
+    -webkit-animation-delay: 7634ms;
+    animation-delay: 7634ms;
+}
+.estrella:nth-child(14)::before, .estrella:nth-child(14)::after, .estrella:nth-child(14)::after {
+    -webkit-animation-delay: 7634ms;
+    animation-delay: 7634ms;
+}
+.estrella:nth-child(15) {
+    top: calc(50% - -37px);
+    left: calc(50% - 203px);
+    -webkit-animation-delay: 7743ms;
+    animation-delay: 7743ms;
+}
+.estrella:nth-child(15)::before, .estrella:nth-child(15)::after, .estrella:nth-child(15)::after {
+    -webkit-animation-delay: 7743ms;
+    animation-delay: 7743ms;
+}
+.estrella:nth-child(16) {
+    top: calc(50% - 41px);
+    left: calc(50% - 256px);
+    -webkit-animation-delay: 2888ms;
+    animation-delay: 2888ms;
+}
+.estrella:nth-child(16)::before, .estrella:nth-child(16)::after, .estrella:nth-child(16)::after {
+    -webkit-animation-delay: 2888ms;
+    animation-delay: 2888ms;
+}
+.estrella:nth-child(17) {
+    top: calc(50% - -35px);
+    left: calc(50% - 121px);
+    -webkit-animation-delay: 5864ms;
+    animation-delay: 5864ms;
+}
+.estrella:nth-child(17)::before, .estrella:nth-child(17)::after, .estrella:nth-child(17)::after {
+    -webkit-animation-delay: 5864ms;
+    animation-delay: 5864ms;
+}
+.estrella:nth-child(18) {
+    top: calc(50% - 73px);
+    left: calc(50% - 225px);
+    -webkit-animation-delay: 7883ms;
+    animation-delay: 7883ms;
+}
+.estrella:nth-child(18)::before, .estrella:nth-child(18)::after, .estrella:nth-child(18)::after {
+    -webkit-animation-delay: 7883ms;
+    animation-delay: 7883ms;
+}
+.estrella:nth-child(19) {
+    top: calc(50% - -69px);
+    left: calc(50% - 47px);
+    -webkit-animation-delay: 3339ms;
+    animation-delay: 3339ms;
+}
+.estrella:nth-child(19)::before, .estrella:nth-child(19)::after, .estrella:nth-child(19)::after {
+    -webkit-animation-delay: 3339ms;
+    animation-delay: 3339ms;
+}
+.estrella:nth-child(20) {
+    top: calc(50% - 162px);
+    left: calc(50% - 129px);
+    -webkit-animation-delay: 7963ms;
+    animation-delay: 7963ms;
+}
+.estrella:nth-child(20)::before, .estrella:nth-child(20)::after, .estrella:nth-child(20)::after {
+    -webkit-animation-delay: 7963ms;
+    animation-delay: 7963ms;
+}
+
+@-webkit-keyframes tail {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes tail {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+@-webkit-keyframes shining {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 30px;
+    }
+    100% {
+        width: 0;
+    }
+}
+@keyframes shining {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 30px;
+    }
+    100% {
+        width: 0;
+    }
+}
+@-webkit-keyframes shooting {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(300px);
+        transform: translateX(300px);
+    }
+}
+@keyframes shooting {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(300px);
+        transform: translateX(300px);
+    }
+}
+@-webkit-keyframes sky {
+    0% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    100% {
+        -webkit-transform: rotate(405deg);
+        transform: rotate(405deg);
+    }
+}
+@keyframes sky {
+    0% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    100% {
+        -webkit-transform: rotate(405deg);
+        transform: rotate(405deg);
+    }
+}
